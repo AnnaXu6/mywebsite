@@ -1,5 +1,5 @@
 @font-face {
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   src: url('./优设标题黑.ttf') format('truetype');
 }
 
@@ -124,7 +124,7 @@ body {
   padding: calc(5px + 0.1vw) calc(3px + 0.5vw);;
   text-decoration: none;
   z-index: 3;
-  font: 500 calc(8px + 1vw) '优设标题黑';
+  font: 500 calc(8px + 1vw) 'PortfolioDisplay';
 }
 
 .slide1,
@@ -236,7 +236,7 @@ body {
 }
 
 .sidebar-content ul li a {
-  font-family: "优设标题黑";
+  font-family: "PortfolioDisplay";
   font-size: 20px;
   color: white;
   text-decoration: none;
@@ -262,7 +262,7 @@ body {
 }
 
 #Experience h1{
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   font-size: calc(20px + 1vw);
   text-align: center;
   color:rgba(17, 17, 17, 0.913);
@@ -282,8 +282,8 @@ body {
   border-radius: 1em;
   font-family: "Georgia";
   box-shadow: 10px 10px 10px #7ea9c7d7;
-  opacity: 0; /* 初始不可见 */
-  transform: translateX(-50px); /* 初始位置在屏幕左侧外 */
+  opacity: 1; /* Keep resume content visible without scrolling. */
+  transform: translateX(0);
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
@@ -330,7 +330,7 @@ hr{
 
 #Skills h1{
   align-items: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   font-size: calc(20px + 1vw);
   text-align: center;
   color:rgb(0, 0, 0);
@@ -355,7 +355,7 @@ hr{
   width: 40%; /* 文本部分占宽度的 40% */
   padding: 10px;
   box-sizing: border-box;
-  font: 500 calc(18px + 0.5vw) '优设标题黑';
+  font: 500 calc(18px + 0.5vw) 'PortfolioDisplay';
   line-height: 1.5;
 }
 
@@ -368,7 +368,7 @@ hr{
 
 #Interest h1{
   align-items: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   font-size: calc(20px + 1vw);
   text-align: center;
   color:rgb(0, 0, 0);
@@ -393,7 +393,7 @@ hr{
 
 .Piano p{
   text-align: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   padding-right: 15%;
   font-size: calc(7px + 1vw);
 }
@@ -467,7 +467,7 @@ hr{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   padding: 20px;
   font-size: calc(15px + 1vw);
   
@@ -475,7 +475,7 @@ hr{
 
 .Photography{
   text-align: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   padding-top: 40px;
   font-size: calc(15px + 1vw);
   display: flex;
@@ -522,7 +522,7 @@ hr{
 footer{
   padding-top: 5%;
   text-align: center;
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
   justify-content: space-between;
   line-height: 1.5;
   background-color: rgb(172, 191, 214);
@@ -532,10 +532,97 @@ footer{
 }
 
 footer p strong{
-  font-family: '优设标题黑';
+  font-family: 'PortfolioDisplay';
 }
 
 footer p{
   font-family: 'Bradley Hand';
 }
 
+
+/* Responsive layout: retain the original font families throughout. */
+html { scroll-padding-top: 24px; }
+body { color: #202b35; }
+.Top { min-height: 680px; height: 92svh; max-height: 1100px; background-position: center; }
+.Top::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #15365218, #0c213a55 60%, #0c213a22); }
+#bar { position: absolute; top: 30px; margin-top: 0; width: min(780px, calc(100% - 40px)); padding: 8px; box-shadow: 0 8px 30px #12324a26; }
+#bar li a { font-size: clamp(13px, 1.6vw, 20px); padding: 6px clamp(9px, 2vw, 26px); }
+#intro { top: 50%; transform: translateY(-40%); padding: 0 24px; overflow: visible; color: #f6f9fc; text-shadow: 0 2px 14px #142c46aa; }
+#intro h1 { font-size: clamp(32px, 4.7vw, 68px); line-height: 1.25; }
+#intro h3 { font-size: clamp(20px, 2.1vw, 30px); line-height: 1.6; margin-top: 18px; }
+.intro-summary { font-size: clamp(14px, 1.3vw, 18px); line-height: 1.65; margin: 18px auto; max-width: 680px; }
+.resume-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 24px auto 12px; }
+.resume-actions a { font-family: inherit; font-size: 16px; line-height: 1.5; display: inline-block; border: 1px solid currentColor; border-radius: 26px; padding: 11px 22px; color: inherit; text-decoration: none; background: #ffffff18; }
+.resume-actions a:hover { background: #d7eaff; color: #193e65; text-shadow: none; }
+#Experience { max-width: 1160px; margin: auto; padding: clamp(48px, 6vw, 88px) clamp(18px, 4vw, 48px); }
+#Experience h1, #Skills h1, #Interest > h1 { font-size: clamp(28px, 3vw, 42px); margin-bottom: 18px; }
+.section-intro { text-align: center; font-size: 16px; line-height: 1.65; color: #53697b; max-width: 620px; margin: 0 auto 30px; }
+.E { margin-top: 28px; padding: clamp(22px, 3.5vw, 40px); border: 1px solid #dfe9ee; border-radius: 20px; background: #f0f6f7; box-shadow: 0 10px 28px #355d771c; }
+.E h3 { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.5; color: #274e6d; margin-bottom: 16px; }
+.E h4 { font-size: clamp(17px, 1.6vw, 21px); line-height: 1.5; flex-wrap: wrap; gap: 8px 22px; padding: 8px 0; }
+.E h4 p, .entry-date { font-family: inherit; font-size: 14px; line-height: 1.6; color: #52697b; }
+.E ul { font-size: clamp(15px, 1.15vw, 17px); line-height: 1.8; padding: 8px 0 12px 22px; }
+.E li { padding-left: 3px; margin-bottom: 9px; }
+.E hr { margin: 22px 0; border: 0; border-top: 1px dashed #c2d2dc; }
+#Skills { padding: 72px 24px; mask-image: none; -webkit-mask-image: none; background: linear-gradient(#fff, #e8effd 20%, #edf3fc 80%, #fff); }
+#three-canvas-container { width: 100%; max-width: 1100px; margin: auto; min-height: 500px; height: auto; overflow: visible; gap: 36px; }
+#three-canvas-renderer { width: 45%; height: 460px; flex-shrink: 0; }
+#text-container { width: 55%; padding: 20px 0; }
+#text-container > p { font-size: clamp(17px, 1.7vw, 22px); }
+#text-container .skill-values { font-family: 'American Typewriter'; font-size: 16px; line-height: 1.75; margin: 8px 0 24px; }
+#Interest { padding: 56px 24px; max-width: 1160px; margin: auto; }
+.Piano { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; margin: 40px auto 64px; padding: 0; }
+.Piano .audio-container { min-width: 0; gap: 20px; }
+.audio { width: 100%; max-width: none; height: auto; transform: none; padding: 18px; background: #f3f7fb; border: 1px solid #e3ebf2; border-radius: 14px; }
+.audio h1 { font-size: clamp(15px, 1.5vw, 19px) !important; line-height: 1.6; text-align: left !important; }
+.track { gap: 16px; }
+.track img { width: 34px; margin-right: 0; }
+.track div { min-width: 0; }
+.Piano p { padding: 0; font-size: 18px; }
+.Piano .pi { width: 100%; max-width: 280px; padding: 0; margin: 0 auto 18px; }
+.Nail, .Photography { padding: 28px 0; font-size: clamp(20px, 2vw, 28px); width: 100%; }
+.Nail ul { max-width: 900px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.Nail img, #photoset img { width: 100%; }
+#photoset { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 28px; }
+#photoset img:hover { transform: scale(1.03); }
+.floating-sidebar { left: auto; right: 18px; top: auto; bottom: 22px; transform: none; }
+.toggle-button { width: 50px; height: 50px; }
+.sidebar-content { left: 50px; }
+footer { padding: 64px 24px 40px; mask-image: none; -webkit-mask-image: none; background: #d6e4f2; }
+footer h1 { font-size: 30px; margin-bottom: 20px; }
+footer p { font-size: 17px; line-height: 1.9; overflow-wrap: anywhere; }
+footer a { color: #204e73; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #2359a6; outline-offset: 5px; }
+@media (max-width: 800px) {
+ .E h4 { display: block; }
+ .entry-date { display: block; margin-top: 4px; }
+ #three-canvas-container { flex-direction: column; gap: 12px; }
+ #three-canvas-renderer { width: 100%; height: 300px; }
+ #text-container { width: 100%; max-width: 620px; padding: 0; }
+ .Piano { grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; }
+}
+@media (max-width: 560px) {
+ .Top { height: 100svh; min-height: 660px; }
+ #bar { top: 22px; width: calc(100% - 24px); padding: 7px 3px; }
+ #bar li a { font-size: 12px; padding: 8px 9px; }
+ #intro { padding: 0 22px; top: 47%; }
+ #intro h1 { max-width: 340px; margin: auto; }
+ .intro-summary { max-width: 290px; }
+ .resume-actions { gap: 9px; }
+ .resume-actions a { font-size: 14px; padding: 10px 16px; }
+ #Experience { padding: 44px 16px; }
+ .E { padding: 22px 18px; border-radius: 16px; }
+ .E ul { padding-left: 18px; }
+ #Skills { padding: 40px 22px; }
+ #Interest { padding: 36px 18px; }
+ .Piano { grid-template-columns: minmax(0, 1fr); }
+ .Piano > p { max-width: 220px; margin: auto; }
+ .Nail ul { grid-template-columns: 1fr; max-width: 320px; }
+ #photoset { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+ .toggle-button { width: 44px; height: 44px; }
+ .floating-sidebar { right: 12px; bottom: 16px; }
+ .sidebar-content { left: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
