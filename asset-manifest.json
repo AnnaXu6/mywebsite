@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.a0531b2d.css",
+    "main.css": "./static/css/main.d7abcfd9.css",
     "main.js": "./static/js/main.28ba50c6.js",
     "static/media/优设标题黑.ttf": "./static/media/优设标题黑.ccdd188b73ad41f90e61.ttf",
     "static/media/MySQL.png": "./static/media/MySQL.167c88550478e6f0f85c.png",
@@ -8,13 +8,13 @@
     "static/media/linux.png": "./static/media/linux.18f2d6136df54a2e4410.png",
     "static/media/RStudio.png": "./static/media/RStudio.1becc96e5a972ce9ac97.png",
     "static/media/Windows.png": "./static/media/Windows.a85ffafa0a94e47e075e.png",
+    "index.html": "./index.html",
     "static/media/redis.png": "./static/media/redis.602efa858cacd545e790.png",
     "static/media/css.png": "./static/media/css.e7a4a3a007f3e52c563f.png",
-    "index.html": "./index.html",
     "static/media/linkin.png": "./static/media/linkin.cabb3cbaf3529dc02ecc.png"
   },
   "entrypoints": [
-    "static/css/main.a0531b2d.css",
+    "static/css/main.d7abcfd9.css",
     "static/js/main.28ba50c6.js"
   ]
 }
