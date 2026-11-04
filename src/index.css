@@ -626,3 +626,59 @@ a:focus-visible { outline: 3px solid #2359a6; outline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) {
  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Project-first portfolio and progressive disclosure. Original hero rules stay intact. */
+.featured-projects { max-width: 1160px; margin: 0 auto; padding: clamp(48px, 6vw, 80px) clamp(18px, 4vw, 48px) 20px; }
+.section-eyebrow { font: 500 13px/1.6 Georgia, serif; text-align: center; color: #577b96; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+.featured-projects h2 { font-family: 'PortfolioDisplay'; font-size: clamp(28px, 3vw, 42px); text-align: center; margin-bottom: 18px; color: #202b35; }
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.project-card { border: 1px solid #dce7ef; border-radius: 20px; overflow: hidden; background: #f8fbfd; box-shadow: 0 10px 28px #355d7712; }
+.project-visual { padding: 20px 16px 0; background: linear-gradient(135deg, #eaf2f8, #e2edf7); }
+.project-number { font: 500 11px/1.5 Georgia, serif; letter-spacing: .12em; color: #597f9a; }
+.project-visual svg { width: 100%; display: block; font-family: Georgia, serif; }
+.project-body { padding: 24px; }
+.project-date { font: 400 12px/1.6 Georgia, serif; color: #637c8e; margin-bottom: 10px; }
+.project-body h3 { font: 300 clamp(19px, 1.7vw, 23px)/1.5 Papyrus, fantasy; margin-bottom: 14px; color: #204c6d; }
+.project-summary { font: 300 15px/1.8 Georgia, serif; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 20px 0; }
+.project-tags li { font: 400 11px/1.5 'American Typewriter', serif; border: 1px solid #d4e3ed; color: #466c88; border-radius: 16px; padding: 5px 9px; }
+.project-card details, .experience-entry details { border-top: 1px solid #dce6ed; margin-top: 18px; padding-top: 12px; }
+.project-card summary, .experience-entry summary, .more-photos > summary { font: 500 14px/1.7 Georgia, serif; color: #315f80; cursor: pointer; padding: 6px 0; }
+.project-card summary:hover, .experience-entry summary:hover { color: #173e5a; }
+.project-detail-list { font: 300 14px/1.8 Georgia, serif; padding-left: 18px; margin-top: 12px; }
+.project-detail-list li { margin-bottom: 12px; }
+.experience-entry + .experience-entry { margin-top: 26px; padding-top: 22px; border-top: 1px dashed #c2d2dc; }
+.entry-summary { font: 300 clamp(15px, 1.15vw, 17px)/1.8 Georgia, serif; margin: 10px 0; }
+.entry-summary strong { font-weight: 600; color: #2a526f; }
+.experience-entry details { border: 0; padding: 0; margin-top: 8px; }
+.additional-experience > summary { cursor: pointer; font: 500 18px/1.6 Georgia, serif; color: #274e6d; }
+.additional-content { padding-top: 20px; }
+.more-photos { width: 100%; margin-top: 24px; }
+.more-photos > summary { width: fit-content; margin: auto; padding: 12px 24px; border: 1px solid #bed3e1; border-radius: 26px; background: #f5f9fc; }
+.photo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; list-style: none; padding: 0; margin: 28px 0 0; width: 100%; }
+#photoset { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.photo-grid img, #photoset img { width: 100%; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 14px #284c641a; display: block; }
+summary:focus-visible { outline: 3px solid #668db6; outline-offset: 5px; border-radius: 4px; }
+@media (max-width: 1000px) {
+ .project-grid { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin: auto; }
+ .project-card { display: grid; grid-template-columns: 230px minmax(0, 1fr); }
+ .project-visual { display: flex; flex-direction: column; justify-content: center; padding-bottom: 20px; }
+ .photo-grid, #photoset { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+ #bar li a { font-size: 11px; padding: 8px 6px; }
+ .featured-projects { padding: 44px 16px 0; }
+ .project-card { display: block; }
+ .project-visual { padding: 18px 22px 0; }
+ .project-visual svg { max-width: 340px; margin: auto; }
+ .project-body { padding: 22px; }
+ .photo-grid, #photoset { gap: 10px; }
+ .photo-grid img, #photoset img { height: 180px; }
+}
+@media (min-width: 1001px) {
+ .project-grid { align-items: stretch; }
+ .project-card { display: flex; flex-direction: column; }
+ .project-body { display: flex; flex-direction: column; flex: 1; }
+ .project-summary { margin-bottom: 20px; }
+ .project-tags { margin-top: auto; padding-top: 4px; }
+}
